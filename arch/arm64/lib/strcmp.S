@@ -40,10 +40,10 @@
 #define pos		x11
 
 SYM_FUNC_START_WEAK_PI(strcmp)
-	sub	off2, src2, src1
+	/*sub	off2, src2, src1 */
 	mov	zeroones, REP8_01
-	and	tmp, src1, 7
-	tst	off2, 7
+	/*and	tmp, src1, 7*/
+	/*tst	off2, 7*/
 	b.ne	L(misaligned8)
 	ands	tmp1, src1, #7
 	b.ne	L(mutual_align)
